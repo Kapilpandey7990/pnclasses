@@ -1,0 +1,39 @@
+@use "../utilities/" as *;
+
+body {
+   font-family: var(--font-body);
+   color: var(--clr-body);
+   font-size: rem(15);
+   font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: var(--font-title);
+   color: var(--clr-title);
+}
+
+.section-header {
+   text-align: center;
+   margin-bottom: rem(15);
+   .section-header__title {
+      font-size: rem(30);
+      color: var(--clr-blue);
+      margin-bottom: rem(10);
+      @include breakpoint(lg) {
+         font-size: rem(40);
+      }
+   }
+   .section-header__description {
+      max-width: rem(650);
+      margin: 0 auto;
+   }
+}
+
+h3 {
+   font-size: rem(20);
+}

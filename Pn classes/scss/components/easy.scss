@@ -1,0 +1,39 @@
+@use "../utilities/" as *;
+
+.easy-card-container {
+   display: grid;
+   gap: rem(30);
+   margin-top: rem(50);
+   @include breakpoint(md) {
+      grid-template-columns: 1fr 1fr;
+   }
+   @include breakpoint(xl) {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+
+.easy__card {
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   grid-template-columns: 1fr 3fr;
+   padding: rem(30) rem(10);
+   background-color: var(--clr-blue-bg);
+   border: var(--border-light-grey);
+   border-radius: rem(5);
+   transition: all 250ms ease-in-out;
+   &:hover {
+      border-radius: rem(30) rem(5) rem(5) rem(5);
+      box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+   }
+}
+
+.easy__card__image {
+   width: 60%;
+   text-align: center;
+   justify-self: center;
+}
+
+.easy__card__title {
+   margin-bottom: rem(10);
+}

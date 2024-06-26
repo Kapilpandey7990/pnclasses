@@ -1,0 +1,75 @@
+@use "../utilities/" as *;
+
+.application-container {
+   margin-top: rem(50);
+   display: grid;
+   justify-content: center;
+   gap: rem(50);
+   @include breakpoint(md) {
+      display: grid;
+      grid-template-columns: 2fr 1fr 2fr;
+      align-items: stretch;
+      gap: rem(20);
+   }
+   @include breakpoint(xl) {
+      gap: rem(50);
+      grid-template-columns: 2fr 1fr 2fr;
+   }
+}
+
+.mockup-image {
+   @include breakpoint(md) {
+      position: relative;
+      img {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+      }
+   }
+}
+
+.features {
+   display: grid;
+   align-items: stretch;
+   justify-items: stretch;
+   gap: rem(20);
+}
+
+.features--left {
+   @include breakpoint(md) {
+      justify-content: flex-start;
+   }
+}
+
+.features--right {
+   @include breakpoint(md) {
+      justify-content: end;
+   }
+}
+
+.feature-card {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: rem(15);
+   padding: rem(20);
+   background-color: var(--clr-blue-bg);
+   border: var(--border-light-grey);
+   border-radius: rem(5) rem(5) rem(5) rem(5);
+   transition: all 250ms ease-in-out;
+   &:hover {
+      background-image: var(--gradient-blue);
+      color: var(--clr-white);
+      border-radius: rem(20) rem(5) rem(5) rem(5);
+      h3 {
+         color: var(--clr-white);
+      }
+   }
+}
+
+.feature-card__image {
+   max-width: rem(60);
+   img {
+      margin-inline: auto;
+   }
+}

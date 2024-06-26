@@ -1,0 +1,14 @@
+@use "../utilities/" as *;
+
+:root {
+   --clr-blue: hsl(207, 100%, 37%);
+   --clr-blue-hex: #0068bd;
+   --clr-light-blue: hsl(201, 100%, 47%);
+   --clr-white: hsl(0, 0%, 100%);
+   --clr-black: hsl(0, 0%, 0%);
+   --clr-title: hsl(0, 0%, 5%);
+   --clr-body: hsl(0, 0%, 15%);
+   --clr-blue-bg: hsl(200, 100%, 98%);
+   --border-light-grey: 1px solid rgba(0, 0, 0, 0.08);
+   --gradient-blue: linear-gradient(to right, var(--clr-blue), var(--clr-light-blue));
+}

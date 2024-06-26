@@ -1,0 +1,1011 @@
+/* Table of Content
+==================================================
+	#Font-Face
+	#Site Styles
+	#Media Queries */
+
+
+/* #Font-Face
+================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/* #Site Styles
+================================================== */
+
+:root {
+    --font-pop: 'Poppins', sans-serif;
+    ;
+    --clr-blue: #0068bd;
+}
+
+
+/* ### global classes ### */
+
+.clear {
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+
+/* ### menudropdown classes ### */
+
+.nav__item {
+    position: relative;
+}
+
+.nav__item:hover .menudropdown {
+    display: block;
+}
+
+.menudropdown {
+    display: none;
+    width: 241px;
+    
+    position: absolute;
+    left: -10px;
+    top: 25px;
+    background: #0f62ac;
+    z-index: 9;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+}
+.nav__item .menudropdown li {padding: 10px 20px;}
+.nav__item .menudropdown li a {
+    font-size: 14px;
+    color: #fff;
+}
+.nav__item .menudropdown li:hover { background-color: #05345d;}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ### Banner Box ### */
+
+.bannerBox {
+    width: 100%;
+    height: 768px;
+    display: flex;
+}
+
+.bannerBox .main-left {
+    width: 40%;
+    align-self: center;
+}
+
+.bannerBox h2 {
+    font-size: 82px;
+    color: #0f62ac;
+    font-weight: 700;
+    line-height: 58px;
+}
+
+.bannerBox h2 .span1 {
+    font-size: 34px;
+    color: #282828;
+    display: block;
+    font-weight: 500;
+}
+
+.bannerBox h2 .span2 {
+    font-size: 54px;
+    font-weight: 100;
+    display: block;
+}
+
+.bannerBox p {
+    padding-top: 10px;
+    font-size: 22px;
+    color: #404040;
+}
+
+.bannerBox .main-right {
+    width: 60%;
+    position: relative;
+}
+
+.bannerBox .main-right .bigimg {
+    width: 438px;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    bottom: 100px;
+    z-index: 9;
+}
+
+.bannerBox .main-right::before {
+    width: 185px;
+    height: 185px;
+    border-radius: 100%;
+    position: absolute;
+    right: 210px;
+    top: 50px;
+    content: '';
+    background-color: #f2f2f2;
+    z-index: 2;
+}
+
+.bannerBox .main-right::after {
+    width: 295px;
+    height: 295px;
+    border-radius: 100%;
+    position: absolute;
+    right: 80px;
+    top: 300px;
+    content: '';
+    background: url(../../assets/img/whyus/circle.png) left top no-repeat;
+    z-index: 2;
+}
+
+.bannerBox .main-right .smallimg {
+    width: 252px;
+    border-radius: 50px 0 50px 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    z-index: 9;
+}
+
+.bannerBox .main-right .dotte {
+    width: 107px;
+    height: 143px;
+    position: absolute;
+    left: -40px;
+    bottom: 65px;
+    background: url(../../assets/img/whyus/dott.png) left top no-repeat;
+}
+
+.bannerBox .main-right .bigimg img,
+.bannerBox .main-right .smallimg img {
+    border-radius: 50px 0 50px 0;
+}
+
+
+/* ### content Box ### */
+
+.whyusContent {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 160px;
+    border-top: 15px solid #dbd9d9;
+}
+
+.whyusContent .page_title {
+    padding: 32px 0px;
+}
+
+.whyusContent h3 {
+    font-size: 25px;
+    color: #545353;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.whyusContent h2 {
+    font-size: 35px;
+    color: #1c1c1c;
+    font-weight: 700;
+}
+
+.whyusContent .contentrow {
+    padding: 72px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.whyusContent p {
+    padding-bottom: 25px;
+    font-size: 16px;
+    color: #545353;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.whyusContent .image {
+    width: 50%;
+}
+
+.whyusContent .content {
+    padding-right: 25px;
+    width: 50%;
+}
+
+.whyusContent .image.right {
+    order: 2;
+}
+
+.whyusContent .image img {
+    width: 100%;
+}
+
+.whyusContent .count {
+    margin-right: 7px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: #e2af00;
+    border-radius: 100%;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+}
+
+.whyusContent figcaption {
+    font-size: 20px;
+    color: #545353;
+    font-weight: 300;
+}
+
+.whyusContent .contentrow:nth-child(odd) .content {
+    padding-right: 0px;
+    padding-left: 25px;
+}
+
+.circle_imageleft {
+    position: absolute;
+    left: -150px;
+    top: 0px;
+}
+
+.circle_imageright {
+    position: absolute;
+    right: -160px;
+    top: 0px;
+}
+
+
+/* ### video Box ### */
+
+.videoBox {
+    padding: 80px 0px 100px 0px;
+    background: #f6f9fc;
+    text-align: center;
+}
+
+.videoBox h3 {
+    font-size: 25px;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+.videoBox p {
+    text-align: center;
+    line-height: 28px;
+    max-width: 700px;
+    margin: 0px auto;
+}
+
+.videoBox .block {
+    max-width: 961px;
+    margin: 0px auto;
+    padding: 70px 42px 70px 114px;
+    position: relative;
+}
+
+.videoBox .video {
+    max-width: 805px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.videoBox .video:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 13px;
+    transform: translateX(-50%);
+    width: 670px;
+    height: 95px;
+    box-shadow: 0 7px 35px #000;
+}
+
+.videoBox .video img {
+    width: 100%;
+    border-radius: 25px;
+    z-index: 1;
+    position: relative;
+}
+
+.videoBox .video .playbtn {
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.videoBox .icon1 {
+    position: absolute;
+    left: 70px;
+    top: 25px;
+}
+
+.videoBox .icon2 {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+}
+
+.videoBox .icon3 {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.page__title {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--clr-blue);
+    text-align: center;
+}
+
+
+/* ### Advantages Box ### */
+
+.advantageBox {
+    padding: 60px 0px;
+    overflow: hidden;
+}
+
+.advantageBox h3 {
+    font-size: 21px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.advantageBox .left {
+    padding-top: 10px;
+    padding-right: 110px;
+    width: 50%;
+    float: left;
+    text-align: right;
+    position: relative;
+}
+
+.advantageBox .left:before,
+.advantageBox .right:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 25px;
+    width: 95px;
+    height: 1px;
+    background: #e7e8e9;
+}
+
+.advantageBox .right {
+    padding-top: 10px;
+    padding-left: 110px;
+    width: 50%;
+    float: right;
+    position: relative;
+}
+
+.advantageBox .right:before {
+    content: '';
+    left: 0;
+}
+
+.advantageBox ul {
+    padding-top: 96px;
+    overflow: hidden;
+    position: relative;
+}
+
+.advantageBox ul:before {
+    content: '';
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: #ebf4fc;
+    border-radius: 100%;
+}
+
+.advantageBox ul:after {
+    content: '';
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    left: 50%;
+    top: 48px;
+    transform: translateX(-50%);
+    z-index: 3;
+    background: #0f62ac;
+    border-radius: 100%;
+}
+
+.advantageBox li {
+    padding-bottom: 32px;
+    overflow: hidden;
+    position: relative;
+}
+
+.advantageBox li:last-child {
+    padding-bottom: 0px;
+}
+
+.advantageBox li:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    height: 100%;
+    background: #f6f6f6;
+    transform: translateX(-50%);
+}
+
+.advantageBox li:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 16px;
+    height: 100%;
+    background: #d6d3d3;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.advantageBox li p {
+    font-size: 14px;
+    color: #585858;
+    font-weight: 300;
+}
+
+
+/* ### testimonial Box ### */
+
+.testimonialBox {
+    padding: 54px 0px;
+    width: 100%;
+    overflow: hidden;
+    border-top: 5px solid #e7eff7;
+}
+
+.testimonialBox h2 {
+    padding-bottom: 65px;
+}
+
+.testimonialBox ul {
+    list-style: none;
+    margin-right: -30px;
+}
+
+.testimonialBox li {
+    box-shadow: 0 7px 9px #ccc;
+    float: left;
+    position: relative;
+    padding: 32px 35px 40px 35px;
+    width: calc(33.3% - 30px);
+    margin-right: 30px;
+    background: #f0eeee;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.testimonialBox img {
+    border-radius: 100%;
+    border: 10px solid #dddedf;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonialBox h3 {
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #545353;
+}
+
+.testimonialBox .small {
+    font-size: 19px;
+    font-weight: 400;
+    color: #545353;
+}
+
+.testimonialBox p {
+    padding-top: 20px;
+    font-size: 16px;
+    color: #545353;
+    line-height: 25px;
+}
+
+.testimonialBox .dotte {
+    opacity: 0.4;
+    width: 82px;
+    height: 140px;
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    background: url(../../assets/img/whyus/dot-gray.png) left top no-repeat;
+}
+
+.testimonialBox li:hover,
+.testimonialBox li.active {
+    cursor: pointer;
+    background: #fcf9f9;
+}
+
+.testimonialBox li:hover h3,
+.testimonialBox li.active h3 {
+    color: #e2af00;
+}
+
+.testimonialBox li:hover .small,
+.testimonialBox li.active .small {
+    color: #04ccb7;
+}
+
+.testimonialBox li:hover img,
+.testimonialBox li.active img {
+    border-color: #0f62ac;
+}
+
+.testimonialBox li:hover .dotte,
+.testimonialBox li.active .dotte {
+    opacity: 1;
+}
+
+
+/* ### courses Box ### */
+
+.coursesBox {
+    padding: 54px 0px;
+    width: 100%;
+    overflow: hidden;
+    border-top: 5px solid #e7eff7;
+}
+
+.coursesBox h2 {
+    padding-bottom: 65px;
+}
+
+.coursesBox ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.coursesBox li {
+    box-shadow: 0 7px 9px #ccc;
+    position: relative;
+    padding: 0px 0px 40px 0px;
+    width: calc(33.3% - 20px);
+    background: #f0eeee;
+    border-radius: 0 40px 0 40px;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+.coursesBox img {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.coursesBox h3 {
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #545353;
+}
+
+.coursesBox p {
+    padding-top: 20px;
+    font-size: 16px;
+    color: #545353;
+    line-height: 25px;
+}
+
+.coursesBox li:hover,
+.coursesBox li.active {
+    cursor: pointer;
+    background: #fcf9f9;
+}
+
+.coursesBox li:hover h3,
+.coursesBox li.active h3 {
+    color: #e2af00;
+}
+
+.coursesBox .btn {
+    padding: 0 40px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fff;
+    line-height: 45px;
+    margin-top: 10px;
+    background: #0f62ac;
+}
+
+.coursesBox li:hover .btn {
+    background: #e2af00;
+}
+
+
+/* ### form box ### */
+
+.formBox {
+    padding: 70px 50px;
+    width: 100%;
+    background: #f0f7fd;
+}
+
+.formBox.review {
+    background: #ededed;
+}
+
+.formBox .holder {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.formBox h2 {
+    margin-bottom: 65px;
+}
+
+.formBox fieldset {
+    border: none;
+}
+
+.formBox h3 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.formBox .row {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formBox .column {
+    width: 47%;
+}
+
+.formBox .col_left {
+    width: 30%;
+}
+
+.formBox .col_right {
+    width: 70%;
+}
+
+.formBox input {
+    width: 100%;
+}
+
+.formBox input.uploadfile {
+    border: none;
+}
+
+.formBox select {
+    width: 100%;
+}
+
+.formBox textarea {
+    width: 100%;
+}
+
+.formBox .row.btn {
+    justify-content: end;
+}
+
+.formBox .submitBtn {
+    padding: 5px 40px;
+    display: block;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background: #0f62ac;
+}
+
+.formBox .submitBtn:hover {
+    background: #e2af00;
+}
+
+
+/* #Media Queries
+================================================== */
+
+@media only screen and (max-width: 1199px) {
+    .bannerBox h2 {
+        font-size: 68px;
+    }
+    .bannerBox h2 .span2 {
+        font-size: 40px;
+    }
+    .bannerBox .main-right .smallimg {
+        width: 177px;
+    }
+    .bannerBox .main-right .bigimg {
+        width: 370px;
+    }
+    .whyusContent p {
+        line-height: 25px;
+    }
+    .testimonialBox li {
+        padding: 32px 20px 40px 20px;
+    }
+}
+
+@media only screen and (max-width: 979px) {
+    .bannerBox {
+        flex-direction: column;
+    }
+    .bannerBox .main-left {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+    .bannerBox .main-right {
+        width: 100%;
+    }
+    .bannerBox .main-right .bigimg {
+        width: 100%;
+        position: relative;
+        bottom: 0px;
+    }
+    .bannerBox .main-right .smallimg {
+        width: 245px;
+    }
+    .bannerBox {
+        height: auto;
+        padding-bottom: 110px;
+    }
+    .whyusContent h2 {
+        font-size: 28px;
+    }
+    .whyusContent p {
+        font-size: 14px;
+    }
+    .circle_imageright,
+    .circle_imageleft {
+        width: 280px;
+    }
+    .whyusContent .contentrow {
+        padding: 50px 0;
+    }
+    .whyusContent {
+        padding-bottom: 60px;
+    }
+    .videoBox .video:before {
+        width: 90%;
+    }
+    .advantageBox h3 {
+        font-size: 15px;
+    }
+    .advantageBox li p {
+        font-size: 13px;
+    }
+    .advantageBox .left {
+        padding-right: 80px;
+    }
+    .advantageBox .right {
+        padding-left: 80px;
+    }
+    .advantageBox .left:before,
+    .advantageBox .right:before {
+        width: 70px;
+    }
+    .testimonialBox p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .testimonialBox li {
+        padding: 22px 10px 20px 10px;
+    }
+    .testimonialBox img {
+        width: 60%;
+        border-width: 8px;
+    }
+    .testimonialBox h3 {
+        font-size: 18px;
+    }
+    .testimonialBox .small {
+        font-size: 16px;
+    }
+    .footer-top__title {
+        font-size: 2.1rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .bannerBox h2 .span1 {
+        font-size: 26px;
+        line-height: 26px;
+    }
+    .bannerBox h2 {
+        font-size: 54px;
+        padding-top: 20px;
+    }
+    .bannerBox h2 .span2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .bannerBox .main-right .smallimg {
+        display: none;
+    }
+    .whyusContent h3 {
+        font-size: 20px;
+    }
+    .whyusContent h2 {
+        font-size: 23px;
+    }
+    .whyusContent .contentrow {
+        flex-direction: column;
+    }
+    .whyusContent .image {
+        width: 100%;
+    }
+    .whyusContent .content {
+        width: 100%;
+        padding: 20px 0 0 0;
+    }
+    .whyusContent .image.right {
+        order: initial;
+    }
+    .whyusContent .contentrow:nth-child(odd) .content {
+        padding-left: 0px;
+    }
+    .whyusContent .contentrow {
+        padding: 25px 0px;
+    }
+    .whyusContent {
+        padding-bottom: 0px;
+    }
+    .page__title {
+        font-size: 30px;
+    }
+    .videoBox h3 {
+        font-size: 18px;
+    }
+    .videoBox p {
+        line-height: 22px;
+    }
+    .videoBox .block {
+        padding: 50px 10px;
+    }
+    .videoBox {
+        padding: 50px 0;
+    }
+    .advantageBox li:before {
+        left: 21px;
+        width: 6px;
+        transform: translateX(-10px);
+    }
+    .advantageBox li:after {
+        left: 10px;
+        width: 40px;
+    }
+    .advantageBox .left,
+    .advantageBox .right {
+        padding-right: 0px;
+        padding-left: 70px;
+        width: 100%;
+        text-align: left;
+    }
+    .advantageBox ul {
+        overflow: initial;
+    }
+    .advantageBox ul:before {
+        width: 60px;
+        height: 60px;
+        left: 18px;
+        top: 46px;
+    }
+    .advantageBox ul:after {
+        width: 30px;
+        height: 30px;
+        left: 18px;
+        top: 61px;
+    }
+    .advantageBox .left:before,
+    .advantageBox .right:before {
+        left: -6px;
+        top: 19px;
+    }
+    .advantageBox li {
+        padding-bottom: 0px;
+    }
+    .advantageBox .right,
+    .advantageBox .left {
+        padding-bottom: 10px;
+    }
+    .testimonialBox ul {
+        margin: 0px;
+    }
+    .testimonialBox li {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+    .videoBox .icon3 {
+        width: 150px;
+    }
+    .whyusContent p {
+        line-height: 16px;
+        font-size: 13px;
+    }
+    .coursesBox li {
+        width: calc(50% - 20px);
+    }
+    .formBox .holder {
+        max-width: 100%;
+    }
+    .formBox {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .page__title {
+        font-size: 24px;
+    }
+    .advantageBox {
+        padding: 30px 0;
+    }
+    .testimonialBox h2 {
+        padding-bottom: 30px;
+    }
+    .videoBox .block {
+        padding: 50px 0;
+    }
+    .videoBox .video .playbtn {
+        width: 38px;
+    }
+    .whyusContent figcaption {
+        font-size: 17px;
+    }
+    .coursesBox li {
+        width: calc(100% - 0px);
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .formBox h2 {
+        margin-bottom: 30px;
+    }
+    .formBox h3 {
+        font-size: 16px;
+    }
+    .formBox .row {
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+    }
+    .formBox .column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .formBox .col_left {
+        width: 100%;
+    }
+    .formBox .col_right {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    label {
+        margin-bottom: 5px;
+        padding-left: 15px;
+    }
+}

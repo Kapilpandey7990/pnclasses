@@ -1,0 +1,35 @@
+@use "../utilities/" as *;
+
+.page-header {
+   height: clamp(300px, 60vh, 500px);
+   background-image: url("../../assets/img/page-header/page-intro.webp");
+   background-color: var(--clr-body);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+}
+
+.page-header-container {
+   display: grid;
+   height: 100%;
+   padding-bottom: rem(30);
+   align-items: end;
+}
+
+.page-header__title {
+   display: inline-block;
+   font-size: clamp(2.5rem, 5vw, 4rem);
+   color: var(--clr-blue-bg);
+   position: relative;
+   &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      bottom: -20px;
+      left: 0;
+      height: 3px;
+      border-radius: 3px;
+      background-image: var(--gradient-blue);
+   }
+}

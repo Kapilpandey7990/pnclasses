@@ -1,0 +1,44 @@
+@use "../utilities/" as *;
+
+.registration {
+   background-color: var(--clr-blue-bg);
+   background-image: url("../../assets/img/form/form_bg.png");
+   
+}
+
+.form {
+   margin-top: rem(50);
+   background-color: var(--clr-blue);
+   padding: rem(20);
+   max-width: rem(500);
+   margin-inline: auto;
+   display: grid;
+   color: var(--clr-white);
+   border-radius: rem(30) rem(10) rem(10) rem(10);
+   @include breakpoint(md) {
+      padding: rem(30) rem(70);
+      max-width: rem(600);
+   }
+   button {
+      justify-self: center;
+      margin-top: rem(20);
+      border: none;
+      cursor: pointer;
+      background-image: none;
+      background-color: var(--clr-white);
+      color: var(--clr-blue);
+   }
+}
+
+label {
+   margin-top: rem(20);
+   margin-bottom: rem(5);
+}
+
+input,
+textarea,
+select {
+   padding: rem(10) rem(10);
+   border-radius: rem(10) rem(2) rem(2) rem(2);
+   border: var(--border-light-grey);
+}

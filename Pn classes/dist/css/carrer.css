@@ -1,0 +1,234 @@
+.career {
+  background: linear-gradient(
+    90deg,
+    rgb(10, 55, 239) 0%,
+    rgb(13, 148, 244) 100%
+  );
+  /* background-image: url("https://pninstitute.in/assets/images/title-back/title-back.webp"); */
+  height: 18rem;
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.career .subCarrer {
+  width: 70%;
+  margin: auto;
+  color: #fff;
+}
+
+.career .subCarrer h1 {
+  color: #fff;
+  font-weight: 800;
+}
+
+.career .subCarrer p {
+  color: #fff;
+  text-align: justify;
+  font-weight: 600;
+}
+
+.OurEthos {
+  height: 25rem;
+  background-color: #eaebfb;
+}
+
+.OurEthos .SubOurEthos {
+  width: 80%;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.OurEthos .SubOurEthos h1 {
+  text-align: center;
+  color: #00a6ff;
+  margin-bottom: 2.5rem;
+}
+/* dropdwon  Start ********************************* */
+
+.positions {
+  padding: 2em 0;
+}
+
+button{
+  background: linear-gradient(130deg,#00a6ff,#0085cc,#005499,#0085cc,#00a6ff);
+ padding: .2rem;
+ margin: auto;
+}
+button:hover {
+ background-color: white;
+
+}
+button a{
+  color: white;
+}
+
+button a:hover{
+  color: white;
+}
+
+/* .container {
+  margin: auto;
+  max-width: 75rem;
+  width: 85%;
+} */
+.positions__container{
+  display: flex;
+}
+.positions .positions__container .positions-left {
+  margin-bottom: 2em;
+  width: 50%;
+}
+.positions .positions__container .positions-right{
+width: 50%;
+padding-left: 1rem;
+}
+
+.section__title {
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 5s linear infinite;
+  animation: shine 5s linear infinite;
+  background: linear-gradient(130deg,#00a6ff,#0085cc,#005499,#0085cc,#00a6ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% auto;
+  color: var(--blue);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.3em auto;
+  text-align: center;
+
+
+}
+.positions .positions__container .positions-left .role-class {
+  border-bottom: 1px solid hsla(0,0%,8%,.2);
+  padding: 1.5em 0;
+}
+
+
+
+.positions .positions__container .positions-left .role-class .role-summary {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+.positions .positions__container .positions-left .role-class .responsibilities {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+
+
+.positions .positions__container .positions-left .role-class .res-list {
+  margin-block: 0;
+}
+
+
+
+.positions .positions__container .positions-left .role-class .competencies {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+
+.positions .positions__container .positions-left .role-class .comp-list {
+  margin-block: 0;
+}
+
+.positions .positions__container .positions-left .role-class .button {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+
+.positions .positions__container .positions-right .car-form {
+  margin-top: 1.5em;
+}
+.positions__container .positions-right  form .row{
+  margin-bottom: 1rem;
+ }
+
+ .swiper-slide{
+  background-image: url(/assets/img/whyus/dot-gray.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-color: transparent;
+ }
+
+/*************************** dropdwon  Start ********************************* */
+
+@media only screen and (max-width: 1115px) {
+  .positions__container{
+    flex-direction: column;
+  }
+  .positions .positions__container .positions-left{
+    width: 100%;
+  }
+  .positions .positions__container .positions-right{
+    width: 100%;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 650px) {
+  .career .subCarrer {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .career {
+    height: 22rem;
+  }
+  .section__title {
+    font-size: 1.5rem;
+  }
+  .positions__container .positions-right form .row {
+    margin-bottom: 0.5rem;
+}
+}
+
+@media only screen and (max-width: 390px) {
+  .career .subCarrer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .carousel-inner {
+    width: 70%;
+    margin: auto;
+  }
+   .positions__container .positions-right  form .row{
+    flex-direction: column;
+   }
+   .positions__container .positions-right  form .col{
+    margin-bottom: 1rem;
+   }
+   
+}
+
+@media only screen and (max-width: 750px) {
+  .carousel-inner {
+    width: 100%;
+    margin: auto;
+  }
+  .OurEthos {
+    height: 51rem;
+  }
+  .mainImage {
+    flex-direction: column;
+  }
+  
+}

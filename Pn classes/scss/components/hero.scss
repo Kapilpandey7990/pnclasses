@@ -1,0 +1,29 @@
+@use "../utilities/" as *;
+
+.hero {
+   padding: 0;
+}
+
+.swiper {
+   .bx {
+      font-size: 30px;
+      color: black;
+   }
+}
+
+.slide-image {
+   width: 100%;
+}
+
+.mySwiperDesktop {
+   display: none;
+   @include breakpoint(md) {
+      display: block;
+   }
+}
+
+.mySwiperMobile {
+   @include breakpoint(md) {
+      display: none;
+   }
+}

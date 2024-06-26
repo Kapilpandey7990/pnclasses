@@ -1,0 +1,70 @@
+@use "../utilities/" as *;
+
+.standard-card-container {
+   // display: grid;
+   // gap: rem(30);
+   margin-top: rem(50);
+   // @include breakpoint(md) {
+   //   grid-template-columns: 1fr 1fr;
+   // }
+   // @include breakpoint(xl) {
+   //   grid-template-columns: 1fr 1fr 1fr;
+   // }
+}
+
+.standard-card {
+   overflow: hidden;
+   border-radius: rem(5);
+   border: var(--border-light-grey);
+   position: relative;
+   &::after,
+   &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background-image: url("../../assets/img/standard/blob.svg");
+      opacity: 0;
+      transition: all 250ms ease-in-out;
+   }
+   &::after {
+      top: -20%;
+      left: -20%;
+   }
+   &::before {
+      bottom: -25%;
+      right: -25%;
+   }
+   &:hover {
+      border-radius: rem(30) rem(5) rem(5) rem(5);
+      box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+      &::after,
+      &::before {
+         opacity: 1;
+      }
+      .standard-card__img {
+         img {
+            transform: scale(1.1);
+         }
+      }
+   }
+}
+
+.standard-card__img {
+   overflow: hidden;
+   aspect-ratio: 16/9;
+   img {
+      width: 100%;
+      object-fit: cover;
+      transition: all 250ms ease-in-out;
+   }
+}
+
+.standard-card__content {
+   text-align: center;
+   display: grid;
+   gap: rem(15);
+   justify-content: center;
+   justify-items: center;
+   padding: rem(15) rem(10);
+}
